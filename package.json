@@ -1,0 +1,27 @@
+{
+  "name": "minimi-chat-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A fast, honest chat agent with web search and a dated memory of past conversations.",
+  "engines": {
+    "node": ">=20.3"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "seed": "tsx scripts/seed.ts",
+    "eval": "tsx scripts/eval.ts",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "dotenv": "^18.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
